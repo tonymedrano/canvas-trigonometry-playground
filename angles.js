@@ -19,16 +19,25 @@ window.onload = () => {
             let angledot = i * slice + angle;
             let xdot = centerX + Math.cos(angledot) * radius;
             let ydot = centerY + Math.sin(angledot) * radius;
-            ctx.beginPath();
+
+            ctx.beginPath(); //. Yellow lines
+            ctx.moveTo(centerX,centerY);
+            ctx.lineTo(xdot, ydot);
+            ctx.strokeStyle = 'yellow';
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath(); //. Green circles
             ctx.arc(xdot, ydot, 5, 0, Math.PI * 2, false);
             ctx.fillStyle = 'green';
-            ctx.closePath();
             ctx.fill();
+            ctx.closePath();
         }
 
         x = centerX + Math.cos(-angle) * radius;
         y = centerY + Math.sin(-angle) * radius;
-        ctx.beginPath();
+
+        ctx.beginPath(); //. Red circle
         ctx.arc(x, y, 10, 0, Math.PI * 2, false);
         ctx.fillStyle = 'red';
         ctx.closePath();
