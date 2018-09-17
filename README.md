@@ -1,2 +1,3 @@
 # canvas-trigonometry-playground
-As named above.
+All exercises are from Coding Math course in YouTube for free: https://www.youtube.com/user/codingmath
+It's a great course!
